@@ -45,6 +45,7 @@ fun PantallaLaboratorio() {
         contentPadding = PaddingValues(bottom = 100.dp)
     ) {
         item { Caja("1. Text") { ComponenteText() } }
+        item { Caja("2. Button") { ComponenteButton() } }
     }
 }
 
@@ -67,4 +68,10 @@ fun Caja(titulo: String, contenido: @Composable () -> Unit) {
 @Composable
 fun ComponenteText() {
     Text("Hola, este es un Text", fontSize = 18.sp)
+}
+@Composable
+fun ComponenteButton() {
+    Button(onClick = {}) {
+        Text("Button")
+    }
 }
