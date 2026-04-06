@@ -46,6 +46,7 @@ fun PantallaLaboratorio() {
     ) {
         item { Caja("1. Text") { ComponenteText() } }
         item { Caja("2. Button") { ComponenteButton() } }
+        item { Caja("3. OutlinedButton") { ComponenteOutlinedButton() } }
     }
 }
 
@@ -73,5 +74,11 @@ fun ComponenteText() {
 fun ComponenteButton() {
     Button(onClick = {}) {
         Text("Button")
+    }
+}
+@Composable
+fun ComponenteOutlinedButton() {
+    OutlinedButton(onClick = {}) {
+        Text("OutlinedButton")
     }
 }
