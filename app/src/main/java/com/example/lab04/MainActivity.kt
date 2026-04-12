@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -68,7 +69,20 @@ fun Caja(titulo: String, contenido: @Composable () -> Unit) {
 
 @Composable
 fun ComponenteText() {
-    Text("Hola, este es un Text", fontSize = 18.sp)
+    Text(
+        text = "Hola, este es un Text",
+        fontSize = 20.sp,
+        fontWeight = FontWeight.Bold,
+        color = Color(0xFF6650A4),
+        letterSpacing = 1.5.sp,
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(
+                color = Color(0xFFEADDFF),
+                shape = RoundedCornerShape(12.dp)
+            )
+            .padding(12.dp)
+    )
 }
 @Composable
 fun ComponenteButton() {
