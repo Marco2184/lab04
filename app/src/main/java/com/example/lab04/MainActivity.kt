@@ -69,6 +69,7 @@ fun Caja(titulo: String, contenido: @Composable () -> Unit) {
 }
 
 @Composable
+// Modificado por Pepe
 fun ComponenteText() {
     Text(
         text = "Hola, este es un Text",
