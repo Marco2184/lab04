@@ -3,6 +3,7 @@ package com.example.lab04
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -20,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -78,7 +80,28 @@ fun ComponenteButton() {
 }
 @Composable
 fun ComponenteOutlinedButton() {
-    OutlinedButton(onClick = {}) {
-        Text("OutlinedButton")
+    OutlinedButton(
+        onClick = {},
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(50.dp),
+        shape = RoundedCornerShape(12.dp),
+        border = BorderStroke(2.dp, Color(0xFF6650A4)),
+        colors = ButtonDefaults.outlinedButtonColors(
+            contentColor = Color(0xFF6650A4)
+        )
+    ) {
+        Icon(
+            imageVector = Icons.Default.Star,
+            contentDescription = null,
+            modifier = Modifier.size(18.dp)
+        )
+        Spacer(modifier = Modifier.width(8.dp))
+        Text(
+            text = "OutlinedButton",
+            fontSize = 16.sp,
+            fontWeight = FontWeight.SemiBold,
+            letterSpacing = 1.sp
+        )
     }
 }
